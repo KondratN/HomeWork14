@@ -9,8 +9,11 @@ class Project:
         self.name_programmers = name_programmers
 
     def __str__(self):
+        prog = ' '
+        for progrs in self.name_programmers:
+            prog += '\t' + '\t' + '\t' + '\t' + progrs + '\n'
         return f"Название проекта: {self.name}\nДата начала: {self.start_date}\nДата окончания: {self.end_date}\n" \
-               f"Программисты: {self.name_programmers}"
+               f"Программисты: \n{prog}"
 
     def add_programmer(self, programmer):
         if len(self.name_programmers) < 4:
